@@ -38,7 +38,7 @@ app.get('/api/konyvek', (req, res) => {
   });
 });
 
-app.delete('/api/konyvek/:id', (req, res) => {
+app.delete('/api/torleskonyv/:id', (req, res) => {
   const bookId = req.params.id;
   const query = 'DELETE FROM konyvek WHERE konyv_id = ?';
   db.query(query, [bookId], (err, result) => {
@@ -55,7 +55,7 @@ app.delete('/api/konyvek/:id', (req, res) => {
   });
 });
 
-app.post('/api/konyvek', (req, res) => {
+app.post('/api/ujkonyvek', (req, res) => {
   const { cim, alcim, isbn, kiado_id, leiras } = req.body;
   const query = 'INSERT INTO konyvek (cim, alcim, isbn, kiado_id, leiras) VALUES (?, ?, ?, ?, ?)';
   db.query(query, [cim, alcim, isbn, kiado_id, leiras], (err, result) => {

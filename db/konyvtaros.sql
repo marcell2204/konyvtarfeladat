@@ -64,7 +64,7 @@ CREATE TABLE `konyvtarosok` (
   `konyvtaros_id` int(11) NOT NULL,
   `felhasznalonev` varchar(100) NOT NULL,
   `teljes_nev` varchar(255) NOT NULL,
-  `email` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
