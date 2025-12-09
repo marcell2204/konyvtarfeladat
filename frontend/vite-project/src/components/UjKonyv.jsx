@@ -28,7 +28,7 @@ function HozzaAdas({ onBookAdded }) {
 
   return (
     <form className="add-book" onSubmit={handleSubmit}>
-      <h2>Add New Book</h2>
+      <h2>Új könyv</h2>
       <input
         type="text"
         name="cim"
@@ -64,7 +64,7 @@ function HozzaAdas({ onBookAdded }) {
         value={formData.leiras}
         onChange={handleChange}
       ></textarea>
-      <button type="submit">Add</button>
+      <button type="submit">Hozzáad</button>
     </form>
   );
 }

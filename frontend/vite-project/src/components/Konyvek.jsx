@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import '../index.css';
 
 function Konyvek({ onDelete }) {
   const [books, setBooks] = useState([]);
@@ -15,7 +16,7 @@ function Konyvek({ onDelete }) {
       setBooks(response.data);
       setLoading(false);
     } catch (error) {
-      console.error('Error fetching books:', error);
+      console.error('Hiba a könyvek lekérdezésénél:', error);
     }
   };
 
@@ -28,10 +29,9 @@ function Konyvek({ onDelete }) {
       <h1>Könyvek</h1>
       <ul>
         {books.map((book) => (
-          <li key={book.konyv_id}>
-            <span>{book.cim}</span>
-            <button onClick={() => onDelete(book.konyv_id)}>Törlés</button>
-          </li>
+          <ul key={book.konyv_id}>
+            <span className='span'>{book.cim}        {book.konyv_id}</span>
+          </ul>
         ))}
       </ul>
     </div>
